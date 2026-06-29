@@ -5,4 +5,4 @@ class Potion:
 
 
 def create_potion_instance(potion: dict) -> Potion:
-    return Potion(*potion.values())
+    return Potion(name=potion["name"], effect=potion["effect"])

@@ -5,4 +5,4 @@ class Weapon:
 
 
 def create_weapon_instance(weapon: dict) -> Weapon:
-    return Weapon(*weapon.values())
+    return Weapon(name=weapon["name"], power=weapon["power"])

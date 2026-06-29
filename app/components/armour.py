@@ -5,4 +5,7 @@ class Armour:
 
 
 def create_armour_instances(armours: list[dict]) -> list[Armour]:
-    return [Armour(*armour.values()) for armour in armours]
+    return [
+        Armour(part=armour["part"], protection=armour["protection"])
+        for armour in armours
+    ]

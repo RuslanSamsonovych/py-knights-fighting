@@ -20,7 +20,7 @@ def knight_preparing(knight_config: dict) -> Knight:
         power=knight_config["power"],
         hp=knight_config["hp"],
     )
-    if knight_config["armour"]:
+    if knight_config.get("armour", []):
         knight.apply_armour(create_armour_instances(knight_config["armour"]))
     knight.apply_weapon(create_weapon_instance(knight_config["weapon"]))
     if knight_config["potion"] is not None:
